@@ -31,7 +31,7 @@ public class LoginCheckFilter implements Filter {
                 if (session==null || session.getAttribute(SessionConst.LOGIN_MEMBER)==null){
                     log.info("미인증 사용자 요청 {}", requestURI);
 
-                    httpResponse.sendRedirect("/login?redireckURL="+requestURI);
+                    httpResponse.sendRedirect("/login?redirectURL="+requestURI);
                     return;
                 }
             }
